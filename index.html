@@ -2,28 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>EST Time</title>
-    <style>
-      body {
-        text-align: center;
-        margin-top: 50px;
-      }
-      #clock {
-        font-size: 2em;
-        margin-bottom: 20px;
-      }
-    </style>
+    <title>obama + celeb generator</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="clock">loading...</div>
-    <img src="download.jpg" width="200" height="200" alt="meme"/>
-    <script>
-      function updateClock() {
-        const est = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" });
-        document.getElementById("clock").textContent = est;
-      }
-      setInterval(updateClock, 1000);
-      updateClock();
-    </script>
+    <div class="container">
+      <div id="caption">generate obama + ??? holding hands</div>
+      <img id="generated-img" src="" alt="ai image" width="200" height="200" />
+      <br />
+      <button id="generate-btn">generate</button>
+      <button id="copy-btn" style="display:none;">copy image</button>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
