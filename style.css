@@ -1,20 +1,38 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #7f8c8d;
+}
+
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background: #f0f0f0;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem 0;
 }
 
 .container {
-  text-align: center;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-#caption {
-  font-weight: bold;
-  margin-bottom: 10px;
+.project-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    body { padding: 1rem 0; }
 }
